@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
@@ -24,13 +24,11 @@
     <header class="site-header">
       <div class="container header-inner">
         <a href="#beranda" class="brand" aria-label="Beranda Larissa">
-          <span class="brand-mark">
-            <img src="/larissa-mark.png" alt="" />
-          </span>
+          <span class="brand-mark"><img src="/larissa-mark.png" alt="" /></span>
           <img src="/larissa-wordmark.png" alt="Larissa" class="brand-word" />
         </a>
         <nav class="nav" aria-label="Navigasi utama">
-          <a href="#tentang">Tentang</a>
+          <a href="#mengapa">Mengapa Kami</a>
           <a href="#layanan">Layanan</a>
           <a href="#home-service">Home Service</a>
           <a href="#fasilitas">Fasilitas</a>
@@ -50,37 +48,64 @@
     <main id="beranda">
       <!-- HERO -->
       <section class="hero">
+        <!-- decorative background shapes -->
+        <span class="hero-bg-blob hero-bg-blob-1" aria-hidden></span>
+        <span class="hero-bg-blob hero-bg-blob-2" aria-hidden></span>
+        <span class="hero-bg-dots" aria-hidden></span>
+
         <div class="container hero-grid">
-          <div>
-            <span class="pill">
+          <div class="hero-copy">
+            <span class="pill pill-glow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m9 12 2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/></svg>
-              Akreditasi Paripurna Kemenkes
+              Akreditasi Paripurna · Kemenkes RI
             </span>
             <h1 class="hero-title">
-              Cek kesehatan rutin, <span class="accent">tanpa antre.</span>
+              Cek kesehatan rutin,<br />
+              <span class="accent-gradient">tanpa antre.</span>
             </h1>
             <p class="hero-sub">
-              Laboratorium medis &amp; klinik terpercaya di Surabaya Timur sejak
-              1987. Layanan Home Service &amp; kunjungan klinik dengan hasil
-              yang akurat dan transparan.
+              Laboratorium medis &amp; klinik terpercaya di Surabaya sejak 1987.
+              Pemeriksaan lengkap, hasil akurat, dan layanan Home Service yang
+              memudahkan rutinitas Anda.
             </p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="#layanan">Lihat Layanan</a>
+              <a class="btn btn-primary btn-lg" href="#layanan">
+                Lihat Layanan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
               <a
-                class="btn btn-outline"
+                class="btn btn-outline btn-lg"
                 href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20layanan"
                 target="_blank"
                 rel="noopener"
               >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Pesan via WhatsApp
               </a>
             </div>
-            <p class="hero-note">Melayani Surabaya Timur dan sekitarnya.</p>
+
+            <div class="hero-mini-stats">
+              <div>
+                <span>38+</span>
+                <p>tahun pengalaman</p>
+              </div>
+              <div>
+                <span>14+</span>
+                <p>jenis pemeriksaan</p>
+              </div>
+              <div>
+                <span>1987</span>
+                <p>terpercaya sejak</p>
+              </div>
+            </div>
           </div>
+
           <div class="hero-visual">
             <span class="halo halo-1" aria-hidden></span>
             <span class="halo halo-2" aria-hidden></span>
+            <span class="halo halo-3" aria-hidden></span>
             <img src="/larissa-mark.png" alt="" class="hero-mark" />
+
             <span class="float-chip float-chip-1">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
               Promo Hari Ini
@@ -89,24 +114,39 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Home Service
             </span>
+            <span class="float-chip float-chip-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              Hasil Akurat
+            </span>
           </div>
+        </div>
+
+        <!-- trust strip -->
+        <div class="container trust-strip">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/></svg> Akreditasi Paripurna</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Sejak 1987</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Surabaya Timur</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tim Berpengalaman</div>
         </div>
       </section>
 
       <!-- PROMO -->
-      <section id="promo" class="section">
+      <section id="promo" class="section section-promo">
         <div class="container">
           <header class="section-head">
             <div>
-              <p class="eyebrow eyebrow-accent">Promo</p>
-              <h2>Pemeriksaan pilihan, harga hemat</h2>
-              <p class="section-sub">Paket favorit untuk skrining rutin dan deteksi dini.</p>
+              <p class="eyebrow eyebrow-accent">Promo Pilihan</p>
+              <h2>Paket favorit, harga hemat</h2>
+              <p class="section-sub">Skrining rutin &amp; deteksi dini dengan harga yang ramah di kantong.</p>
             </div>
           </header>
 
           <div class="grid grid-3">
-            <article class="promo-card">
-              <span class="promo-badge">HEMAT</span>
+            <article class="promo-card promo-card-accent">
+              <div class="promo-card-top">
+                <span class="promo-badge">HEMAT</span>
+                <svg class="promo-illust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M9 2v6.6a2 2 0 0 1-.2.9L4.6 18a2 2 0 0 0 1.8 3h11.2a2 2 0 0 0 1.8-3l-4.2-8.5a2 2 0 0 1-.2-.9V2"/><path d="M8 2h8"/><path d="M7 16h10"/></svg>
+              </div>
               <h3>Gula Darah Puasa</h3>
               <p>Deteksi dini risiko diabetes dengan pemeriksaan kadar glukosa puasa.</p>
               <div class="price-row">
@@ -114,127 +154,170 @@
                   <p class="price-strike">Rp 65.000</p>
                   <p class="price-now">Rp 45.000</p>
                 </div>
-                <a class="btn btn-soft btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Gula%20Darah%20Puasa" target="_blank" rel="noopener">Pesan</a>
+                <a class="btn btn-soft btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Gula%20Darah%20Puasa" target="_blank" rel="noopener">Pesan
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
             </article>
 
-            <article class="promo-card">
-              <span class="promo-badge">TERLARIS</span>
+            <article class="promo-card promo-card-feature">
+              <div class="promo-card-top">
+                <span class="promo-badge promo-badge-feature">TERLARIS</span>
+                <svg class="promo-illust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+              </div>
               <h3>Darah Lengkap (CBC)</h3>
-              <p>Evaluasi sel darah merah, putih, hemoglobin &amp; trombosit.</p>
+              <p>Evaluasi menyeluruh sel darah merah, putih, hemoglobin, &amp; trombosit.</p>
               <div class="price-row">
                 <div>
                   <p class="price-strike">Rp 130.000</p>
                   <p class="price-now">Rp 95.000</p>
                 </div>
-                <a class="btn btn-soft btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Darah%20Lengkap" target="_blank" rel="noopener">Pesan</a>
+                <a class="btn btn-light btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Darah%20Lengkap" target="_blank" rel="noopener">Pesan
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
             </article>
 
             <article class="promo-card">
-              <span class="promo-badge">SKRINING JANTUNG</span>
+              <div class="promo-card-top">
+                <span class="promo-badge">SKRINING JANTUNG</span>
+                <svg class="promo-illust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3.5 12h4l2-9 4 18 2-9h5"/></svg>
+              </div>
               <h3>Profil Lipid Lengkap</h3>
-              <p>Kolesterol total, HDL, LDL, dan trigliserida.</p>
+              <p>Kolesterol total, HDL, LDL, &amp; trigliserida untuk skrining jantung.</p>
               <div class="price-row">
                 <div>
                   <p class="price-strike">Rp 225.000</p>
                   <p class="price-now">Rp 165.000</p>
                 </div>
-                <a class="btn btn-soft btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Profil%20Lipid" target="_blank" rel="noopener">Pesan</a>
+                <a class="btn btn-soft btn-sm" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Profil%20Lipid" target="_blank" rel="noopener">Pesan
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
               </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENGAPA LARISSA -->
+      <section id="mengapa" class="section section-alt">
+        <div class="container">
+          <header class="section-head center">
+            <p class="eyebrow">Mengapa Larissa</p>
+            <h2>Pelayanan kesehatan yang prima &amp; terpercaya</h2>
+            <p class="section-sub">Empat alasan mengapa ribuan pasien memilih Larissa untuk pemeriksaan kesehatan rutin mereka.</p>
+          </header>
+
+          <div class="grid grid-4">
+            <article class="feature-card">
+              <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/></svg></span>
+              <h3>Akurasi Tinggi</h3>
+              <p>Hasil pemeriksaan dengan standar mutu laboratorium terakreditasi.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              <h3>Cepat &amp; Tepat Waktu</h3>
+              <p>Hasil dirilis sesuai jadwal yang dijanjikan, tanpa membuat Anda menunggu.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <h3>Home Service</h3>
+              <p>Pengambilan sampel langsung di rumah, lewati antrean &amp; macet.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <h3>Tim Profesional</h3>
+              <p>Dilayani tenaga medis &amp; analis berpengalaman yang ramah.</p>
             </article>
           </div>
         </div>
       </section>
 
       <!-- LAYANAN -->
-      <section id="layanan" class="section section-alt">
+      <section id="layanan" class="section">
         <div class="container">
           <header class="section-head center">
             <p class="eyebrow">Jenis Layanan</p>
             <h2>Pilih sesuai kebutuhan Anda</h2>
-            <p class="section-sub">
-              Layanan laboratorium dan non-laboratorium yang lengkap untuk
-              deteksi dini, kontrol rutin, dan medical check-up.
-            </p>
+            <p class="section-sub">Layanan laboratorium dan non-laboratorium untuk deteksi dini, kontrol rutin, &amp; medical check-up.</p>
           </header>
 
           <div class="grid grid-3 grid-services">
             <a class="service-card" href="#kontak">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.6a2 2 0 0 1-.2.9L4.6 18a2 2 0 0 0 1.8 3h11.2a2 2 0 0 0 1.8-3l-4.2-8.5a2 2 0 0 1-.2-.9V2"/><path d="M8 2h8"/></svg>
               </span>
-              <div>
-                <h3>Pemeriksaan Darah</h3>
-                <p>Hematologi &amp; kimia klinik lengkap.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>Pemeriksaan Darah</h3>
+              <p>Hematologi &amp; kimia klinik lengkap untuk skrining &amp; kontrol.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
 
             <a class="service-card" href="#kontak">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h.01"/><circle cx="12" cy="5" r="3"/></svg>
               </span>
-              <div>
-                <h3>Patologi &amp; Imuno</h3>
-                <p>Pap smear, serologi, urinalisa.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>Patologi &amp; Imuno</h3>
+              <p>Pap smear, serologi, urinalisa, &amp; pemeriksaan feses.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
 
             <a class="service-card" href="#kontak">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><rect x="7" y="8" width="10" height="8" rx="1"/></svg>
               </span>
-              <div>
-                <h3>Radiologi &amp; X-Ray</h3>
-                <p>Pencitraan diagnostik di klinik.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>Radiologi &amp; X-Ray</h3>
+              <p>Pencitraan diagnostik dengan peralatan modern di klinik.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
 
             <a class="service-card" href="#kontak">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </span>
-              <div>
-                <h3>USG</h3>
-                <p>Ultrasonografi organ dalam.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>USG</h3>
+              <p>Ultrasonografi organ dalam untuk diagnosis yang detail.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
 
             <a class="service-card" href="#kontak">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12h4l2-9 4 18 2-9h5"/></svg>
               </span>
-              <div>
-                <h3>ECG &amp; Spirometri</h3>
-                <p>Cek jantung &amp; fungsi paru.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>ECG &amp; Spirometri</h3>
+              <p>Cek irama jantung &amp; fungsi paru dengan teknologi terkini.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
 
             <a class="service-card" href="#home-service">
-              <span class="service-icon">
+              <span class="service-icon-bg">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               </span>
-              <div>
-                <h3>Home Service</h3>
-                <p>Pengambilan sampel ke rumah.</p>
-              </div>
-              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              <h3>Home Service</h3>
+              <p>Pengambilan sampel di rumah, jadwal sesuai keinginan Anda.</p>
+              <span class="service-link">Selengkapnya
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
             </a>
           </div>
         </div>
       </section>
 
       <!-- HOME SERVICE -->
-      <section id="home-service" class="section">
+      <section id="home-service" class="section section-alt">
         <div class="container home-grid">
           <div>
             <p class="eyebrow">Home Service</p>
-            <h2>Nakes datang ke rumah Anda</h2>
+            <h2>Pengambilan sampel<br/><span class="accent">langsung di rumah Anda</span></h2>
             <p class="section-sub">
               Lewati antrean dan kemacetan. Tim tenaga kesehatan kami siap
               datang untuk pengambilan sampel laboratorium di rumah, dengan
@@ -242,55 +325,64 @@
             </p>
             <ul class="check-list">
               <li>Pilih jadwal &amp; alamat sesuai kebutuhan</li>
-              <li>Pengambilan sampel oleh tenaga medis berpengalaman</li>
+              <li>Pengambilan oleh tenaga medis berpengalaman</li>
               <li>Hasil dapat diakses secara digital</li>
-              <li>Tersedia untuk pemeriksaan darah lengkap dan rutin</li>
+              <li>Cocok untuk lansia, ibu hamil, &amp; pasien sibuk</li>
             </ul>
-            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Home%20Service" target="_blank" rel="noopener">Pesan Home Service</a>
+            <a class="btn btn-primary btn-lg" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20pesan%20Home%20Service" target="_blank" rel="noopener">
+              Pesan Home Service
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
-          <div class="home-card">
-            <span class="home-tag">Layanan Unggulan</span>
-            <h3>Cek Kesehatan Tanpa Keluar Rumah</h3>
-            <p>Cocok untuk lansia, ibu hamil, &amp; mereka dengan kesibukan tinggi.</p>
-            <div class="home-stats">
-              <div><span>38+</span><p>tahun pengalaman</p></div>
-              <div><span>14+</span><p>jenis layanan</p></div>
-              <div><span>1987</span><p>terpercaya sejak</p></div>
+
+          <div class="home-card-wrap">
+            <span class="home-card-shape" aria-hidden></span>
+            <div class="home-card">
+              <span class="home-tag">Layanan Unggulan</span>
+              <h3>Cek Kesehatan Tanpa Keluar Rumah</h3>
+              <p>Solusi praktis untuk pemeriksaan rutin keluarga Anda.</p>
+              <div class="home-stats">
+                <div><span>3</span><p>langkah pemesanan</p></div>
+                <div><span>1×24</span><p>jam respons</p></div>
+                <div><span>100%</span><p>privasi terjaga</p></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- TENTANG -->
-      <section id="tentang" class="section section-alt">
+      <!-- TENTANG / VISI MISI -->
+      <section id="tentang" class="section">
         <div class="container two-col">
           <div>
             <p class="eyebrow">Tentang Larissa</p>
-            <h2>Laboratorium yang tumbuh bersama masyarakat Surabaya Timur</h2>
+            <h2>Tumbuh bersama masyarakat Surabaya Timur sejak <span class="accent">1987</span></h2>
             <p>
-              Berdedikasi meningkatkan kesehatan masyarakat sejak 1987, kami
-              kini menjadi Laboratorium Medis dan Klinik Utama yang
+              Larissa adalah Laboratorium Medis &amp; Klinik Utama yang
               terakreditasi <strong>Paripurna</strong> oleh Kemenkes RI.
               Didukung tenaga medis kompeten dan fasilitas lengkap, kami
-              menghadirkan layanan kesehatan yang kredibel dan transparan.
+              menghadirkan layanan kesehatan yang kredibel dan transparan
+              untuk keluarga Anda.
             </p>
             <div class="values">
-              <span class="value"><b>L</b>oyal</span>
-              <span class="value"><b>A</b>kurat</span>
-              <span class="value"><b>R</b>amah</span>
-              <span class="value"><b>I</b>novatif</span>
-              <span class="value"><b>S</b>emangat</span>
+              <span class="value"><b>L</b><i>oyal</i></span>
+              <span class="value"><b>A</b><i>kurat</i></span>
+              <span class="value"><b>R</b><i>amah</i></span>
+              <span class="value"><b>I</b><i>novatif</i></span>
+              <span class="value"><b>S</b><i>emangat</i></span>
             </div>
           </div>
           <div class="vm-grid">
-            <article class="vm-card">
+            <article class="vm-card vm-visi">
+              <span class="vm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
               <h3>Visi</h3>
               <p>Menjadi laboratorium medis yang terpercaya dengan pelayanan prima.</p>
             </article>
-            <article class="vm-card">
+            <article class="vm-card vm-misi">
+              <span class="vm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
               <h3>Misi</h3>
               <ul>
-                <li>Pelayanan kesehatan yang bermutu dan terjangkau.</li>
+                <li>Pelayanan kesehatan yang bermutu &amp; terjangkau.</li>
                 <li>Analisis hasil diagnosis yang tepat.</li>
                 <li>Mendayagunakan sumber daya secara optimal.</li>
               </ul>
@@ -300,36 +392,42 @@
       </section>
 
       <!-- FASILITAS -->
-      <section id="fasilitas" class="section">
+      <section id="fasilitas" class="section section-alt">
         <div class="container">
           <header class="section-head center">
             <p class="eyebrow">Fasilitas</p>
             <h2>Lengkap untuk kenyamanan &amp; akurasi</h2>
+            <p class="section-sub">Ruang &amp; peralatan yang dirancang untuk pengalaman pasien yang nyaman.</p>
           </header>
-          <div class="facilities">
-            <span>Ruang Radiologi / X-Ray</span>
-            <span>Ruang USG</span>
-            <span>Ruang ECG</span>
-            <span>Ruang Audiometri</span>
-            <span>Ruang Spirometri</span>
-            <span>Ruang Sampling</span>
-            <span>Ruang Laboratorium</span>
-            <span>Ruang Tunggu Pasien</span>
-            <span>Mushola</span>
-            <span>Toilet</span>
-            <span>Kursi Roda</span>
-            <span>Parkir</span>
+          <div class="grid grid-fac">
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/></svg> Radiologi / X-Ray</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Ruang USG</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12h4l2-9 4 18 2-9h5"/></svg> Ruang ECG</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg> Audiometri</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 3 3"/><path d="M21 21l-3.5-3.5"/><circle cx="11" cy="11" r="8"/></svg> Spirometri</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.6a2 2 0 0 1-.2.9L4.6 18a2 2 0 0 0 1.8 3h11.2a2 2 0 0 0 1.8-3l-4.2-8.5a2 2 0 0 1-.2-.9V2"/><path d="M8 2h8"/></svg> Ruang Sampling</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.5 21h15l-5.289-10.577A2 2 0 0 1 14 9.527V2"/><path d="M8 2h8"/></svg> Laboratorium</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg> Ruang Tunggu</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg> Mushola</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M3 22V8a5 5 0 0 1 10 0v14"/><path d="M21 22V11"/></svg> Toilet</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M12 18H9"/><path d="M14 4h3l2 4"/><path d="M9 18 7 9h11"/></svg> Kursi Roda</div>
+            <div class="fac-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h13l3 5v6h-2"/><path d="M9 17h6"/></svg> Parkir</div>
           </div>
         </div>
       </section>
 
       <!-- KONTAK -->
       <section id="kontak" class="section section-primary">
+        <span class="kontak-bg-blob" aria-hidden></span>
         <div class="container kontak-grid">
           <div>
             <p class="eyebrow eyebrow-light">Hubungi Kami</p>
             <h2>Siap melayani konsultasi &amp; pemesanan layanan</h2>
             <p class="lead">Tim kami akan membantu Anda memilih pemeriksaan yang tepat dan menjadwalkan kunjungan.</p>
+            <a class="btn btn-light btn-lg" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20bertanya" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Chat di WhatsApp
+            </a>
           </div>
           <div class="kontak-card">
             <ul class="kontak-list">
@@ -346,7 +444,6 @@
                 <div><b>WhatsApp</b><br/><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a></div>
               </li>
             </ul>
-            <a class="btn btn-light btn-block" href="https://wa.me/6281234567890?text=Halo%20Larissa%2C%20saya%20ingin%20bertanya" target="_blank" rel="noopener">Chat WhatsApp</a>
           </div>
         </div>
       </section>
@@ -355,21 +452,43 @@
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-grid">
-        <a href="#beranda" class="brand">
-          <span class="brand-mark"><img src="/larissa-mark.png" alt=""/></span>
-          <img src="/larissa-wordmark.png" alt="Larissa" class="brand-word"/>
-        </a>
-        <nav class="footer-nav">
-          <a href="#tentang">Tentang</a>
-          <a href="#layanan">Layanan</a>
-          <a href="#home-service">Home Service</a>
-          <a href="#fasilitas">Fasilitas</a>
-          <a href="#kontak">Kontak</a>
-        </nav>
-        <p class="footer-copy">
-          Laboratorium Medis &amp; Klinik · Surabaya Timur<br/>
-          &copy; Larissa · Serve To Be The Best
-        </p>
+        <div class="footer-brand">
+          <a href="#beranda" class="brand">
+            <span class="brand-mark"><img src="/larissa-mark.png" alt=""/></span>
+            <img src="/larissa-wordmark.png" alt="Larissa" class="brand-word"/>
+          </a>
+          <p>Laboratorium Medis &amp; Klinik · Surabaya Timur</p>
+        </div>
+        <div>
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#layanan">Pemeriksaan Darah</a></li>
+            <li><a href="#layanan">Radiologi &amp; USG</a></li>
+            <li><a href="#layanan">ECG &amp; Spirometri</a></li>
+            <li><a href="#home-service">Home Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tentang</h4>
+          <ul>
+            <li><a href="#tentang">Profil</a></li>
+            <li><a href="#mengapa">Mengapa Larissa</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#promo">Promo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul>
+            <li>Rungkut, Surabaya</li>
+            <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a></li>
+            <li>Sen–Sab · 06:00 – 20:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; Larissa · Serve To Be The Best</p>
+        <p>Akreditasi Paripurna · Kemenkes RI</p>
       </div>
     </footer>
   </body>
