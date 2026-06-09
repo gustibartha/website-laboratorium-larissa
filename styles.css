@@ -879,6 +879,7 @@ body { padding-bottom: 72px; }
 .skrining-tone-3 { background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); color: #fff; }
 .skrining-tone-4 { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #fff; }
 .skrining-tone-5 { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: #fff; }
+.skrining-tone-6 { background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%); color: #fff; }
 .skrining-body {
   padding: 22px 24px 24px;
   display: flex;
@@ -932,15 +933,42 @@ body { padding-bottom: 72px; }
   background: var(--primary);
 }
 .skrining-card-cta {
+  position: relative;
   background: linear-gradient(140deg, #0d9488 0%, #0f766e 60%, #047857 100%);
   border: none;
   color: #fff;
   box-shadow: var(--shadow-glow);
+  overflow: hidden;
 }
-.skrining-card-cta .skrining-body { justify-content: center; min-height: 220px; }
+.skrining-card-cta::after {
+  content: "";
+  position: absolute;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  top: -120px; right: -100px;
+  pointer-events: none;
+}
+.skrining-card-cta .skrining-body { position: relative; z-index: 1; justify-content: center; min-height: 200px; }
 .skrining-card-cta h3 { color: #fff; font-size: 1.4rem; margin-top: 12px; }
-.skrining-card-cta > .skrining-body > p { color: rgba(255,255,255,0.88); margin-bottom: 22px; }
+.skrining-card-cta > .skrining-body > p { color: rgba(255,255,255,0.88); margin-bottom: 22px; max-width: 480px; }
 .skrining-tag-light { background: rgba(255,255,255,0.2); color: #fff; }
+@media (min-width: 700px) {
+  .skrining-card-cta { grid-column: 1 / -1; }
+  .skrining-card-cta .skrining-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    min-height: unset;
+    padding: 26px 32px;
+  }
+  .skrining-card-cta .skrining-body > div.cta-text { display: flex; flex-direction: column; gap: 8px; max-width: 560px; }
+  .skrining-card-cta .skrining-body > .btn { width: auto; flex-shrink: 0; padding: 13px 24px; }
+  .skrining-card-cta .skrining-body > h3 { margin: 0; }
+  .skrining-card-cta .skrining-body > p { margin: 0; }
+}
 
 /* ---------- KONTAK SOCIALS ---------- */
 .kontak-icon-wa { background: #25d36622; color: #15803d; }
