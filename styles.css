@@ -291,7 +291,229 @@ svg { flex-shrink: 0; }
 @media (min-width: 600px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1060px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
 
-/* ---------- MCU PACKAGES ---------- */
+/* ---------- GCU PACKAGES ---------- */
+.grid-gcu { gap: 22px; }
+@media (min-width: 1060px) { .grid-gcu { gap: 18px; } }
+
+.gcu-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  color: var(--fg);
+}
+.gcu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(13,148,136,0.4);
+}
+.gcu-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  z-index: 0;
+}
+.gcu-deco > svg:first-child {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  width: 100%; height: 90px;
+}
+.gcu-plus {
+  position: absolute;
+  width: 22px; height: 22px;
+  color: rgba(13,148,136,0.22);
+}
+.gcu-plus-1 { top: 26px; right: 70px; }
+.gcu-plus-2 { top: 64px; right: 32px; width: 16px; height: 16px; opacity: 0.7; }
+.gcu-stetho {
+  position: absolute;
+  right: -14px;
+  top: 80px;
+  width: 88px; height: 88px;
+  color: rgba(13,148,136,0.12);
+}
+.gcu-tier {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.gcu-tier span {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 30px; height: 30px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-radius: 9px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 0.84rem;
+  letter-spacing: 0;
+}
+.gcu-name {
+  position: relative; z-index: 1;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin: 14px 0 22px;
+}
+.gcu-tests {
+  position: relative; z-index: 1;
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 0 0 22px;
+  border-top: 1px dashed var(--border);
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+.gcu-tests li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.88rem;
+  color: var(--fg-soft);
+  line-height: 1.4;
+}
+.gcu-tests li::before {
+  content: "";
+  position: absolute; left: 0; top: 3px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d9488' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gcu-foot {
+  position: relative; z-index: 1;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.gcu-price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 2.05rem;
+  color: var(--fg);
+  margin: 0 0 14px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.gcu-price span {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+  vertical-align: 0.55em;
+  margin-right: 3px;
+  letter-spacing: 0;
+}
+.gcu-price small {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.gcu-flag {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(245,158,11,0.35);
+  z-index: 3;
+  white-space: nowrap;
+}
+.gcu-flag-special { background: linear-gradient(135deg, #f59e0b 0%, #fb923c 100%); }
+.gcu-flag-premium {
+  background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
+  color: #064e3b;
+  box-shadow: 0 8px 18px rgba(252,211,77,0.4);
+}
+
+/* --- Pra Nikah variant --- */
+.gcu-special {
+  border-color: rgba(245,158,11,0.35);
+  background: linear-gradient(180deg, #fffbeb 0%, #ffffff 70%);
+}
+.gcu-special .gcu-tier span { background: #fef3e0; color: var(--accent-deep); }
+.gcu-special .gcu-tests li::before {
+  background: #fef3e0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97706' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+}
+.gcu-special .gcu-plus, .gcu-special .gcu-stetho { color: rgba(245,158,11,0.2); }
+.gcu-btn-special { background: var(--accent-soft) !important; color: var(--accent-deep) !important; }
+.gcu-btn-special:hover { background: #fde9be !important; }
+
+/* --- Feature: Paling Populer --- */
+.gcu-feature {
+  background: linear-gradient(150deg, #0d9488 0%, #0f766e 55%, #047857 100%);
+  border: none;
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+.gcu-feature .gcu-tier { color: rgba(255,255,255,0.82); }
+.gcu-feature .gcu-tier span { background: rgba(255,255,255,0.22); color: #fff; }
+.gcu-feature .gcu-name { color: #fff; }
+.gcu-feature .gcu-tests { border-top-color: rgba(255,255,255,0.2); }
+.gcu-feature .gcu-tests li { color: rgba(255,255,255,0.94); }
+.gcu-feature .gcu-tests li::before {
+  background: rgba(255,255,255,0.22);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+}
+.gcu-feature .gcu-foot { border-top-color: rgba(255,255,255,0.18); }
+.gcu-feature .gcu-price { color: #fff; }
+.gcu-feature .gcu-price span, .gcu-feature .gcu-price small { color: rgba(255,255,255,0.78); }
+.gcu-feature .gcu-plus { color: rgba(255,255,255,0.3); }
+.gcu-feature .gcu-stetho { color: rgba(255,255,255,0.18); }
+.gcu-feature .gcu-deco > svg:first-child path { fill: rgba(255,255,255,0.18); }
+
+/* --- Premium: Terlengkap --- */
+.gcu-premium {
+  background: linear-gradient(150deg, #134e4a 0%, #0f3a36 60%, #064e3b 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(6,78,59,0.34);
+}
+.gcu-premium .gcu-tier { color: rgba(253,230,138,0.85); }
+.gcu-premium .gcu-tier span { background: rgba(253,230,138,0.18); color: #fde68a; }
+.gcu-premium .gcu-name { color: #fff; }
+.gcu-premium .gcu-tests { border-top-color: rgba(255,255,255,0.14); }
+.gcu-premium .gcu-tests li { color: rgba(255,255,255,0.9); font-size: 0.84rem; }
+.gcu-premium .gcu-tests li::before {
+  background: rgba(253,230,138,0.2);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fde68a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+}
+.gcu-premium .gcu-foot { border-top-color: rgba(255,255,255,0.14); }
+.gcu-premium .gcu-price { color: #fff; }
+.gcu-premium .gcu-price span, .gcu-premium .gcu-price small { color: rgba(253,230,138,0.75); }
+.gcu-premium .gcu-plus, .gcu-premium .gcu-stetho { color: rgba(253,230,138,0.22); }
+.gcu-premium .gcu-deco > svg:first-child path { fill: rgba(253,230,138,0.1); }
+.gcu-premium .btn-light { background: #fde68a; color: #064e3b; }
+.gcu-premium .btn-light:hover { background: #fbbf24; }
+
+.gcu-note { margin-top: 26px; font-size: 0.84rem; color: var(--muted); text-align: center; }
+
+/* ---------- MCU PACKAGES (legacy, kept for compatibility) ---------- */
 .grid-mcu { gap: 16px; }
 .mcu-card {
   position: relative;
