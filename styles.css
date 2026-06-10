@@ -659,6 +659,7 @@ svg { flex-shrink: 0; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .service-photo-tag-accent { color: var(--accent-deep); }
+.service-photo-tag-dokter { color: #1d4ed8; }
 .service-body {
   padding: 22px 24px 26px;
   display: flex;
