@@ -935,6 +935,19 @@ svg { flex-shrink: 0; }
 .article-thumb-1 { background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%); }
 .article-thumb-2 { background: linear-gradient(135deg, #f59e0b 0%, #fb923c 100%); }
 .article-thumb-3 { background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%); }
+.article-thumb-blue { background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%); }
+.article-thumb-green { background: linear-gradient(135deg, #16a34a 0%, #65a30d 100%); }
+.article-thumb-red { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); }
+.article-thumb-rose { background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%); }
+.article-see-all {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.86rem; font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+  transition: gap 0.18s ease;
+}
+.article-see-all svg { width: 14px; height: 14px; }
+.article-see-all:hover { gap: 10px; }
 .article-body { padding: 22px 24px 24px; flex: 1; display: flex; flex-direction: column; }
 .article-tag { align-self: flex-start; background: var(--primary-soft); color: var(--primary); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
 .article-card h3 { font-size: 1.1rem; font-weight: 700; margin: 12px 0 6px; line-height: 1.3; }
@@ -1191,6 +1204,35 @@ body { padding-bottom: 72px; }
   .skrining-card-cta .skrining-body > .btn { width: auto; flex-shrink: 0; padding: 13px 24px; }
   .skrining-card-cta .skrining-body > h3 { margin: 0; }
   .skrining-card-cta .skrining-body > p { margin: 0; }
+}
+
+/* ---------- JAM OPERASIONAL GRID ---------- */
+.jam-grid {
+  display: grid;
+  gap: 5px;
+  margin-top: 6px;
+}
+.jam-grid > div {
+  display: grid;
+  grid-template-columns: minmax(140px, max-content) auto 1fr;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+.jam-grid > div::before {
+  content: ":";
+  color: var(--muted-2);
+  grid-column: 2;
+}
+.jam-grid > div > span {
+  color: var(--muted);
+  font-weight: 500;
+}
+.jam-grid > div > b {
+  color: var(--fg);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ---------- KONTAK SOCIALS ---------- */
