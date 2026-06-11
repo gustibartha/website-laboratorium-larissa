@@ -1211,30 +1211,30 @@ body { padding-bottom: 72px; }
 /* ---------- JAM OPERASIONAL GRID ---------- */
 .jam-grid {
   display: grid;
-  gap: 5px;
-  margin-top: 6px;
-}
-.jam-grid > div {
-  display: grid;
-  grid-template-columns: minmax(140px, max-content) auto 1fr;
-  align-items: baseline;
-  gap: 10px;
+  grid-template-columns: max-content max-content;
+  gap: 6px 14px;
+  margin: 8px 0 0;
   font-size: 0.9rem;
   line-height: 1.35;
 }
-.jam-grid > div::before {
-  content: ":";
-  color: var(--muted-2);
-  grid-column: 2;
-}
-.jam-grid > div > span {
+.jam-grid dt {
   color: var(--muted);
   font-weight: 500;
+  position: relative;
+  padding-right: 14px;
 }
-.jam-grid > div > b {
+.jam-grid dt::after {
+  content: ":";
+  position: absolute;
+  right: 0;
+  color: var(--muted-2);
+}
+.jam-grid dd {
   color: var(--fg);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+  margin: 0;
+  white-space: nowrap;
 }
 
 /* ---------- KONTAK SOCIALS ---------- */
