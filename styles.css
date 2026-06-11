@@ -939,6 +939,8 @@ svg { flex-shrink: 0; }
 .article-thumb-green { background: linear-gradient(135deg, #16a34a 0%, #65a30d 100%); }
 .article-thumb-red { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); }
 .article-thumb-rose { background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%); }
+.article-thumb-purple { background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%); }
+.article-thumb-orange { background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%); }
 .article-see-all {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 0.86rem; font-weight: 600;
