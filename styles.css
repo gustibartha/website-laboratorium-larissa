@@ -42,6 +42,23 @@ body {
   text-rendering: optimizeLegibility;
   line-height: 1.55;
   padding-bottom: 0;
+  text-transform: capitalize;
+}
+
+/* Keep technical / address / URL text in their original case */
+a[href^="mailto:"],
+a[href^="tel:"],
+a[href*="wa.me"],
+a[href*="instagram"],
+a[href*="facebook"],
+a[href*="tiktok"],
+.kontak-list a,
+.gcu-price,
+.mcu-price,
+.price-now,
+.price-strike,
+.brand-sub {
+  text-transform: none;
 }
 h1, h2, h3, h4 { font-family: "Manrope", "Inter", system-ui, sans-serif; letter-spacing: -0.015em; line-height: 1.15; margin: 0; }
 a { color: inherit; text-decoration: none; }
