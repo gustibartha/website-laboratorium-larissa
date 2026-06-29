@@ -841,6 +841,13 @@ svg { flex-shrink: 0; }
 .service-photo-tag-accent { color: var(--accent-deep); }
 .service-photo-tag-dokter { color: #1d4ed8; }
 .service-photo-tag-booster { color: #ea580c; }
+.service-photo-tag-korporat { color: #1e40af; }
+/* Full-visible photo (no crop) for cards that need the whole image shown */
+.service-photo-full {
+  background: #eef3f4;
+}
+.service-photo-full img { object-fit: contain; }
+.service-photo-full::after { display: none; }
 .service-body {
   padding: 22px 24px 26px;
   display: flex;
