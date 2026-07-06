@@ -795,6 +795,117 @@ svg { flex-shrink: 0; }
 .promo-bonus-disc-hot { background: #fdecec; color: #c81e1e; }
 .promo-terms { margin-top: 18px; text-align: center; font-size: 0.82rem; color: var(--muted); }
 
+/* ---------- FLASH SALE 7.7 ---------- */
+.flash-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(120% 120% at 0% 0%, #0f7a48 0%, transparent 55%),
+    radial-gradient(120% 120% at 100% 100%, #0b5e3a 0%, transparent 55%),
+    linear-gradient(135deg, #0d6b40 0%, #075035 55%, #053d29 100%);
+  color: #fff;
+  padding: 44px 24px 40px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+.flash-blob { position: absolute; border-radius: 50%; filter: blur(40px); pointer-events: none; }
+.flash-blob-1 { width: 260px; height: 260px; background: rgba(250,204,21,0.18); top: -100px; left: -60px; }
+.flash-blob-2 { width: 240px; height: 240px; background: rgba(229,52,42,0.22); bottom: -110px; right: -50px; }
+.flash-dots {
+  position: absolute; width: 120px; height: 120px; pointer-events: none; opacity: 0.5;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.35) 1.5px, transparent 2px);
+  background-size: 16px 16px;
+}
+.flash-dots-tl { top: 18px; left: 18px; }
+.flash-dots-br { bottom: 18px; right: 18px; }
+.flash-seal {
+  position: absolute; top: 18px; right: 18px; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 92px; height: 92px; border-radius: 50%;
+  background: linear-gradient(135deg, #16a34a 0%, #0d7a3f 100%);
+  border: 2px dashed rgba(255,255,255,0.55);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transform: rotate(8deg);
+  line-height: 1.05;
+}
+.flash-seal small { font-size: 0.52rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+.flash-seal b { font-family: "Manrope", sans-serif; font-size: 1.15rem; font-weight: 800; color: #fde047; }
+@media (max-width: 560px) { .flash-seal { width: 74px; height: 74px; top: 12px; right: 12px; } .flash-seal b { font-size: 0.95rem; } }
+.flash-inner { position: relative; z-index: 1; }
+.flash-eyebrow {
+  margin: 0 0 6px; font-size: 0.82rem; font-weight: 700;
+  color: #fde047; letter-spacing: 0.02em;
+}
+.flash-title {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 6px 16px; margin: 0;
+}
+.flash-word {
+  font-family: "Manrope", sans-serif; font-weight: 800;
+  font-size: 2rem; letter-spacing: -0.01em; color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+.flash-77 {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: "Manrope", sans-serif; font-weight: 800;
+  font-size: 3.2rem; line-height: 1;
+  color: #fff;
+  background: linear-gradient(135deg, #ef4444 0%, #c81e1e 100%);
+  padding: 6px 20px 6px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(220,38,38,0.4);
+  transform: rotate(-2deg);
+}
+.flash-bolt { width: 30px; height: 42px; color: #fde047; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+@media (min-width: 700px) { .flash-word { font-size: 2.8rem; } .flash-77 { font-size: 4.2rem; } .flash-bolt { width: 40px; height: 56px; } }
+.flash-offer {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 14px; margin-top: 22px;
+}
+.flash-disc {
+  display: inline-flex; flex-direction: column; align-items: center; line-height: 1;
+  background: #fff; color: #c81e1e;
+  padding: 10px 22px; border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
+}
+.flash-disc small { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #16a34a; }
+.flash-disc strong { font-family: "Manrope", sans-serif; font-size: 2.4rem; font-weight: 800; letter-spacing: -0.02em; }
+.flash-scope {
+  text-align: left; font-family: "Manrope", sans-serif;
+  font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.2;
+}
+.flash-scope b { color: #fde047; font-size: 1.35em; }
+.flash-cta {
+  margin-top: 26px;
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  color: #053d29;
+  box-shadow: 0 14px 30px rgba(234,179,8,0.4);
+  font-weight: 800;
+}
+.flash-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(234,179,8,0.5); }
+.flash-values {
+  margin-top: 20px;
+  display: grid; gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 760px) { .flash-values { grid-template-columns: repeat(4, 1fr); } }
+.flash-value {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 14px 16px;
+}
+.flash-value-ic {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: var(--primary-soft); color: var(--primary);
+  border-radius: 12px;
+}
+.flash-value-ic svg { width: 22px; height: 22px; }
+.flash-value b { display: block; font-size: 0.9rem; font-weight: 700; color: var(--fg); line-height: 1.2; }
+.flash-value p { margin: 2px 0 0; font-size: 0.76rem; color: var(--muted); line-height: 1.2; }
+
 /* ---------- SERVICE CARDS ---------- */
 .grid-services .service-card {
   position: relative;
