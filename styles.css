@@ -907,6 +907,26 @@ svg { flex-shrink: 0; }
   color: #fde047;
 }
 
+/* ---------- PROMO GALLERY ---------- */
+.promo-gallery {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 760px) { .promo-gallery { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.promo-poster-card {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.promo-poster-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.promo-poster-card img { display: block; width: 100%; height: auto; }
+.promo-cta-row { margin-top: 28px; text-align: center; }
+
 /* ---------- SERVICE CARDS ---------- */
 .grid-services .service-card {
   position: relative;
