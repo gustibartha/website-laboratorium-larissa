@@ -116,6 +116,10 @@ svg { flex-shrink: 0; }
   gap: 18px;
   padding: 14px 22px;
 }
+.header-right { display: inline-flex; align-items: center; gap: 12px; }
+.kemenkes-logo { height: 34px; width: auto; display: block; }
+@media (max-width: 640px) { .kemenkes-logo { height: 26px; } }
+@media (max-width: 400px) { .kemenkes-logo { display: none; } }
 .brand { display: inline-flex; align-items: center; gap: 11px; }
 .brand-mark {
   display: inline-flex;
