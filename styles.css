@@ -931,6 +931,101 @@ svg { flex-shrink: 0; }
 .promo-poster-card img { display: block; width: 100%; height: auto; }
 .promo-cta-row { margin-top: 28px; text-align: center; }
 
+/* ---------- PROMO MERDEKA (Agustus) ---------- */
+.merdeka-section {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0;
+  background:
+    radial-gradient(120% 120% at 0% 0%, #e23b3b 0%, transparent 50%),
+    radial-gradient(120% 120% at 100% 100%, #a01818 0%, transparent 55%),
+    linear-gradient(135deg, #c81e1e 0%, #a81a1a 55%, #8a1414 100%);
+  color: #fff;
+}
+@media (min-width: 960px) { .merdeka-section { padding: 84px 0; } }
+.merdeka-blob { position: absolute; border-radius: 50%; filter: blur(50px); pointer-events: none; }
+.merdeka-blob-1 { width: 300px; height: 300px; background: rgba(255,255,255,0.18); top: -120px; left: -80px; }
+.merdeka-blob-2 { width: 280px; height: 280px; background: rgba(255,255,255,0.12); bottom: -130px; right: -70px; }
+.merdeka-grid {
+  position: relative; z-index: 1;
+  display: grid; gap: 32px;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 900px) { .merdeka-grid { grid-template-columns: 0.85fr 1.15fr; gap: 48px; } }
+.merdeka-poster {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(0,0,0,0.15);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  max-width: 440px;
+  margin-inline: auto;
+  width: 100%;
+}
+.merdeka-poster img { display: block; width: 100%; height: auto; }
+.merdeka-poster.is-empty { min-height: 360px; aspect-ratio: 2 / 3; border: 2px dashed rgba(255,255,255,0.25); }
+.merdeka-poster.is-empty img { display: none; }
+.merdeka-poster.is-empty::after {
+  content: "Poster promo Merdeka segera hadir";
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+  color: rgba(255,255,255,0.5); font-size: 0.9rem; font-weight: 600;
+}
+.merdeka-content { max-width: 560px; }
+.merdeka-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #c81e1e;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.01em;
+  padding: 9px 16px; border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.merdeka-badge svg { width: 15px; height: 15px; color: #eab308; }
+.merdeka-heading {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.2rem; font-weight: 800; line-height: 1.08;
+  letter-spacing: -0.02em; margin: 18px 0 0; color: #fff;
+  text-transform: uppercase;
+}
+@media (min-width: 700px) { .merdeka-heading { font-size: 3rem; } }
+.merdeka-em { color: #fde047; }
+.merdeka-tagline { margin: 8px 0 0; font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.92); }
+.merdeka-price {
+  display: inline-flex; flex-direction: column; line-height: 1.1;
+  margin-top: 22px;
+  background: #fff; color: #c81e1e;
+  padding: 12px 26px; border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.merdeka-price span { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #16a34a; }
+.merdeka-price b { font-family: "Manrope", sans-serif; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; }
+.merdeka-checks {
+  list-style: none; padding: 0; margin: 26px 0 0;
+  display: grid; gap: 10px 20px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 620px) { .merdeka-checks { grid-template-columns: 1fr 1fr 1fr; } }
+.merdeka-checks li {
+  position: relative; padding-left: 26px;
+  font-size: 0.9rem; font-weight: 500; color: rgba(255,255,255,0.95);
+}
+.merdeka-checks li::before {
+  content: ""; position: absolute; left: 0; top: 2px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c81e1e' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+  background-size: 12px; background-position: center; background-repeat: no-repeat;
+}
+.merdeka-cta {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  color: #8a1414;
+  box-shadow: 0 14px 32px rgba(234,179,8,0.4);
+  font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+}
+.merdeka-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(234,179,8,0.5); }
+.merdeka-note { margin: 18px 0 0; font-size: 0.95rem; font-weight: 600; color: #fde047; }
+
 /* ---------- SERVICE CARDS ---------- */
 .grid-services .service-card {
   position: relative;
