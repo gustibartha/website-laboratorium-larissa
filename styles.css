@@ -932,6 +932,9 @@ svg { flex-shrink: 0; }
 .promo-cta-row { margin-top: 28px; text-align: center; }
 .promo-gallery-2 { grid-template-columns: 1fr; max-width: 840px; margin-inline: auto; }
 @media (min-width: 760px) { .promo-gallery-2 { grid-template-columns: 1fr 1fr; } }
+.promo-gallery-3 { grid-template-columns: 1fr; }
+@media (min-width: 560px) { .promo-gallery-3 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .promo-gallery-3 { grid-template-columns: 1fr 1fr 1fr; } }
 .promo-poster-card.is-empty { position: relative; aspect-ratio: 1 / 1; }
 .promo-poster-card.is-empty img { display: none; }
 .promo-poster-card.is-empty::after {
