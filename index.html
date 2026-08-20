@@ -85,7 +85,23 @@
 
     <main id="beranda">
       <!-- HERO -->
-      <section class="hero">
+      <section class="hero" id="hero">
+        <!-- Background video (auto-activates when /videos/hero.mp4 exists) -->
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="/videos/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero.webm" type="video/webm" />
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <span class="hero-video-overlay" aria-hidden></span>
+
         <span class="hero-bg-blob hero-bg-blob-1" aria-hidden></span>
         <span class="hero-bg-blob hero-bg-blob-2" aria-hidden></span>
         <span class="hero-bg-dots" aria-hidden></span>
@@ -1148,5 +1164,27 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Buat Janji
     </a>
+
+    <script>
+      // Activate the video hero ONLY when the background video actually plays.
+      // If /videos/hero.mp4 is missing, the hero stays exactly as-is (light theme).
+      (function () {
+        var hero = document.getElementById("hero");
+        if (!hero) return;
+        var v = hero.querySelector(".hero-video");
+        if (!v) return;
+        var activated = false;
+        function activate() {
+          if (activated) return;
+          activated = true;
+          hero.classList.add("hero--has-video");
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        }
+        // loadeddata fires only if a real source loaded (won't fire on 404)
+        v.addEventListener("loadeddata", activate);
+        if (v.readyState >= 2) activate();
+      })();
+    </script>
   </body>
 </html>
