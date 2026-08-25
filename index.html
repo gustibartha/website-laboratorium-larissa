@@ -1185,6 +1185,99 @@
         v.addEventListener("loadeddata", activate);
         if (v.readyState >= 2) activate();
       })();
+
+      // Scroll progress bar (thin gradient line at the very top)
+      (function () {
+        var bar = document.createElement("div");
+        bar.className = "scroll-progress";
+        document.body.appendChild(bar);
+        var ticking = false;
+        function update() {
+          var h = document.documentElement;
+          var max = h.scrollHeight - h.clientHeight;
+          var p = max > 0 ? h.scrollTop / max : 0;
+          bar.style.width = (p * 100).toFixed(2) + "%";
+          ticking = false;
+        }
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!ticking) {
+              ticking = true;
+              requestAnimationFrame(update);
+            }
+          },
+          { passive: true }
+        );
+        update();
+      })();
+
+      // Scroll reveal — graceful fade/slide-up as sections enter view
+      (function () {
+        if (!("IntersectionObserver" in window)) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        var selectors = [
+          ".hero-copy",
+          ".section-head",
+          ".gcu-card",
+          ".service-card",
+          ".skrining-card",
+          ".article-card",
+          ".promo-poster-card",
+          ".mcu-card",
+          ".fac-item",
+          ".vm-card",
+          ".value",
+          ".flash-value",
+          ".faq-list details",
+          ".lokasi-map",
+          ".lokasi-card",
+          ".kontak-card",
+          ".home-card-wrap",
+          ".merdeka-poster",
+          ".merdeka-content",
+          ".promo-cta-row",
+        ];
+
+        var els = [];
+        selectors.forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (el) {
+            els.push(el);
+          });
+        });
+
+        // Stagger siblings that share a parent (grid cards ripple in)
+        var counts = new Map();
+        els.forEach(function (el) {
+          el.setAttribute("data-reveal", "");
+          var p = el.parentElement;
+          var n = counts.get(p) || 0;
+          el.style.setProperty("--reveal-delay", Math.min(n, 6) * 70 + "ms");
+          counts.set(p, n + 1);
+        });
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var t = e.target;
+              t.classList.add("in");
+              io.unobserve(t);
+              // Clean up so normal hover transitions resume afterwards
+              setTimeout(function () {
+                t.removeAttribute("data-reveal");
+                t.style.removeProperty("--reveal-delay");
+                t.style.removeProperty("will-change");
+              }, 1000);
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
     </script>
   </body>
 </html>
