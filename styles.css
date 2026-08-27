@@ -416,17 +416,17 @@ svg { flex-shrink: 0; }
 .ehero-meta {
   margin: 0;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.78rem; font-weight: 400;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: rgba(22, 33, 31, 0.6);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(22, 33, 31, 0.7);
 }
 .ehero-meta-accent { color: var(--eaccent); }
 .ehero-title {
   margin: 22px 0 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 300;
+  font-weight: 600;
   font-size: clamp(2.9rem, 7vw, 5.6rem);
-  line-height: 1.04; letter-spacing: -0.02em;
+  line-height: 1.05; letter-spacing: -0.02em;
   color: var(--eink);
 }
 .ehero-line { display: block; overflow: hidden; }
@@ -438,8 +438,8 @@ svg { flex-shrink: 0; }
 }
 .ehero-sub {
   margin: 26px 0 0; max-width: 560px;
-  font-size: 1.06rem; font-weight: 300; line-height: 1.62;
-  color: rgba(22, 33, 31, 0.72);
+  font-size: 1.06rem; font-weight: 500; line-height: 1.6;
+  color: rgba(22, 33, 31, 0.78);
   text-wrap: pretty;
 }
 .ehero-cta { margin-top: 34px; display: flex; flex-wrap: wrap; align-items: center; gap: 26px; }
@@ -477,7 +477,7 @@ svg { flex-shrink: 0; }
   position: relative; z-index: 1;
   display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--eaccent);
   padding-bottom: 14px; border-bottom: 1px solid rgba(13, 148, 136, 0.2);
 }
@@ -509,7 +509,7 @@ svg { flex-shrink: 0; }
 }
 .ehero-stats span {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 300; font-size: 2.3rem; letter-spacing: -0.01em; color: var(--eink);
+  font-weight: 600; font-size: 2.3rem; letter-spacing: -0.01em; color: var(--eink);
 }
 .ehero-stats i {
   font-family: "IBM Plex Mono", ui-monospace, monospace; font-style: normal;
@@ -528,8 +528,8 @@ svg { flex-shrink: 0; }
 .ehero-marquee-track { display: flex; width: max-content; animation: eheroMarquee 34s linear infinite; }
 .ehero-marquee-track span {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 0.76rem; letter-spacing: 0.28em; text-transform: uppercase; white-space: pre;
-  color: rgba(22, 33, 31, 0.55); padding-right: 40px;
+  font-size: 0.76rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; white-space: pre;
+  color: rgba(22, 33, 31, 0.62); padding-right: 40px;
 }
 
 /* ---- entrance + continuous keyframes ---- */
