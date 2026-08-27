@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
@@ -85,90 +85,57 @@
 
     <main id="beranda">
       <!-- HERO -->
-      <section class="hero" id="hero">
-        <!-- Background video (auto-activates when /videos/hero.mp4 exists) -->
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="/videos/hero-poster.jpg"
-          aria-hidden="true"
-        >
-          <source src="/videos/hero.webm" type="video/webm" />
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
-        <span class="hero-video-overlay" aria-hidden></span>
+      <section class="hero ehero" id="hero" aria-label="Larissa — hasil akurat, keputusan tepat">
+        <span class="ehero-grid-lines" aria-hidden></span>
 
-        <span class="hero-bg-blob hero-bg-blob-1" aria-hidden></span>
-        <span class="hero-bg-blob hero-bg-blob-2" aria-hidden></span>
-        <span class="hero-bg-dots" aria-hidden></span>
-
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="pill pill-glow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m9 12 2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/></svg>
-              Akreditasi Paripurna · Kemenkes RI
-            </span>
-            <h1 class="hero-title">
-              Pemeriksaan kesehatan,<br />
-              <span class="accent-gradient">akurat &amp; mudah.</span>
-            </h1>
-            <p class="hero-sub">
-              Laboratorium medis &amp; klinik terpercaya di Surabaya sejak 2005.
-              Pesan layanan lab, Medical Check-Up, &amp; Home Service langsung
-              dari HP Anda.
+        <div class="container ehero-inner">
+          <div class="ehero-left">
+            <p class="ehero-meta ehero-anim" style="--d: .05s">
+              <span class="ehero-meta-accent">Laboratorium Klinik</span> · Surabaya — Sejak 2005
             </p>
-            <div class="cta-row">
-              <a class="btn btn-primary btn-lg" href="#mcu">
-                Lihat Paket MCU
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </a>
-              <a
-                class="btn btn-outline btn-lg"
-                href="https://wa.me/6285888192005?text=Halo%20Larissa%2C%20saya%20ingin%20konsultasi"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Konsultasi
-              </a>
-            </div>
 
-            <div class="hero-mini-stats">
-              <div><span>20+</span><p>tahun pengalaman</p></div>
-              <div><span>14+</span><p>jenis pemeriksaan</p></div>
-              <div><span>2005</span><p>terpercaya sejak</p></div>
+            <h1 class="ehero-title">
+              <span class="ehero-line"><span class="ehero-anim" style="--d: .18s">Hasil akurat,</span></span>
+              <span class="ehero-line"><em class="ehero-anim" style="--d: .32s">keputusan tepat.</em></span>
+            </h1>
+
+            <span class="ehero-rule ehero-draw" aria-hidden></span>
+
+            <p class="ehero-sub ehero-anim" style="--d: .5s">
+              Pemeriksaan lengkap dengan standar mutu terakreditasi Paripurna Kemenkes —
+              sampel bisa diambil di rumah, hasil dibaca tenaga medis profesional.
+            </p>
+
+            <div class="ehero-cta">
+              <a class="ehero-btn ehero-anim" style="--d: .62s" href="https://wa.me/6285888192005?text=Halo%20Larissa%2C%20saya%20ingin%20buat%20jadwal%20pemeriksaan" target="_blank" rel="noopener">Buat Jadwal Tes</a>
+              <a class="ehero-link ehero-anim" style="--d: .72s" href="#mcu">Lihat paket pemeriksaan →</a>
             </div>
           </div>
 
-          <div class="hero-visual">
-            <span class="halo halo-1" aria-hidden></span>
-            <span class="halo halo-2" aria-hidden></span>
-            <span class="halo halo-3" aria-hidden></span>
-            <span class="hero-orbit" aria-hidden>
-              <span class="hero-orbit-dot"></span>
-            </span>
-            <div class="hero-photo-ring">
-              <div class="hero-photo">
-                <img src="/images/hero-visit.jpg" alt="Pasien berkunjung &amp; konsultasi di Klinik Larissa" />
-                <span class="hero-photo-scan" aria-hidden></span>
+          <div class="ehero-right">
+            <div class="ehero-motif">
+              <span class="ehero-ring" aria-hidden><span class="ehero-ring-inner"></span><span class="ehero-ring-dot"></span></span>
+
+              <div class="ehero-analyzer-head ehero-anim" style="--d: .55s">
+                <span>ANALYZER · RUN 04</span>
+                <span class="ehero-dim">CBC / HbA1c / Lipid</span>
               </div>
+
+              <div class="ehero-bars" data-bars="24" aria-hidden></div>
+
+              <ul class="ehero-stats">
+                <li class="ehero-anim" style="--d: .9s"><span>20+</span><i>Tahun Pengalaman</i></li>
+                <li class="ehero-anim" style="--d: 1s"><span>1×24 Jam</span><i>Hasil Dapat Diakses</i></li>
+                <li class="ehero-anim" style="--d: 1.1s"><span>Paripurna</span><i>Akreditasi Kemenkes</i></li>
+              </ul>
             </div>
-            <span class="float-chip float-chip-1">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
-              Promo Hari Ini
-            </span>
-            <span class="float-chip float-chip-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Home Service
-            </span>
-            <span class="float-chip float-chip-3">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-              Hasil Akurat
-            </span>
+          </div>
+        </div>
+
+        <div class="ehero-marquee ehero-anim" style="--d: .45s" aria-hidden>
+          <div class="ehero-marquee-track">
+            <span>Antar Sampel · Hasil Digital 24 Jam · Tenaga Medis Profesional · Akreditasi Paripurna Kemenkes · Home Service · </span>
+            <span>Antar Sampel · Hasil Digital 24 Jam · Tenaga Medis Profesional · Akreditasi Paripurna Kemenkes · Home Service · </span>
           </div>
         </div>
 
@@ -1285,6 +1252,25 @@
         els.forEach(function (el) {
           io.observe(el);
         });
+      })();
+
+      // Editorial hero — build the analyzer equalizer bars
+      (function () {
+        var wrap = document.querySelector(".ehero-bars");
+        if (!wrap) return;
+        var n = parseInt(wrap.getAttribute("data-bars"), 10) || 24;
+        var frag = document.createDocumentFragment();
+        for (var i = 0; i < n; i++) {
+          var b = document.createElement("span");
+          // base height varies in a gentle wave; CSS animates the rest
+          var wave = 0.35 + 0.65 * (0.5 + 0.5 * Math.sin((i / n) * Math.PI * 4));
+          b.style.setProperty("--h", (18 + wave * 82).toFixed(1) + "%");
+          b.style.setProperty("--ad", (i * 0.06).toFixed(2) + "s"); // appear delay
+          b.style.setProperty("--wd", (i * 0.09).toFixed(2) + "s"); // wave delay
+          if (i % 4 === 0) b.className = "on";
+          frag.appendChild(b);
+        }
+        wrap.appendChild(frag);
       })();
     </script>
   </body>
