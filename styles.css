@@ -1222,6 +1222,27 @@ svg { flex-shrink: 0; }
 .promo-poster-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
 .promo-poster-card img { display: block; width: 100%; height: auto; }
 .promo-cta-row { margin-top: 28px; text-align: center; }
+.promo-single {
+  display: block;
+  max-width: 560px;
+  margin-inline: auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.promo-single:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.promo-single img { display: block; width: 100%; height: auto; }
+.promo-single.is-empty { position: relative; aspect-ratio: 3 / 4; }
+.promo-single.is-empty img { display: none; }
+.promo-single.is-empty::after {
+  content: "Poster promo September segera hadir";
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+  color: var(--muted); font-size: 0.92rem; font-weight: 600;
+}
 .promo-gallery-2 { grid-template-columns: 1fr; max-width: 840px; margin-inline: auto; }
 @media (min-width: 760px) { .promo-gallery-2 { grid-template-columns: 1fr 1fr; } }
 .promo-gallery-3 { grid-template-columns: 1fr; }
