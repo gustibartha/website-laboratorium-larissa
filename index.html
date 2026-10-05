@@ -1269,6 +1269,63 @@
         }
         wrap.appendChild(frag);
       })();
+
+      // Glass header: tighten + lift once the page is scrolled
+      (function () {
+        var header = document.querySelector(".site-header");
+        if (!header) return;
+        var ticking = false;
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(function () {
+              header.classList.toggle("scrolled", window.scrollY > 24);
+              ticking = false;
+            });
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+
+      // Pointer-reactive 3D tilt + dynamic light on cards (hover-capable devices)
+      (function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+        var cards = document.querySelectorAll(
+          ".service-card, .gcu-card, .skrining-card, .promo-poster-card, .article-card, .vm-card, .kontak-card"
+        );
+        var MAX = 6; // degrees
+        cards.forEach(function (card) {
+          card.classList.add("tilt");
+          var raf = null;
+          card.addEventListener("pointermove", function (e) {
+            if (raf) return;
+            raf = requestAnimationFrame(function () {
+              raf = null;
+              var r = card.getBoundingClientRect();
+              var px = (e.clientX - r.left) / r.width - 0.5;
+              var py = (e.clientY - r.top) / r.height - 0.5;
+              var rx = (-py * MAX).toFixed(2);
+              var ry = (px * MAX).toFixed(2);
+              card.style.transform =
+                "perspective(900px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-6px) scale(1.012)";
+              card.style.boxShadow =
+                (-px * 22).toFixed(0) + "px " + (18 - py * 12).toFixed(0) +
+                "px 42px rgba(12, 27, 26, 0.16)";
+            });
+          });
+          card.addEventListener("pointerenter", function () {
+            card.classList.add("tilt-active");
+          });
+          card.addEventListener("pointerleave", function () {
+            card.classList.remove("tilt-active");
+            card.style.transform = "";
+            card.style.boxShadow = "";
+          });
+        });
+      })();
     </script>
   </body>
 </html>

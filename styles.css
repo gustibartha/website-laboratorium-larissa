@@ -2265,8 +2265,59 @@ body { padding-bottom: 72px; }
   }
 }
 
+/* ---------- MODERN MICRO-INTERACTIONS ---------- */
+/* Glass header that tightens & lifts on scroll */
+.site-header {
+  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 10px 34px rgba(12, 27, 26, 0.09);
+  border-bottom-color: rgba(13, 148, 136, 0.14);
+}
+.site-header.scrolled .header-inner { padding-top: 9px; padding-bottom: 9px; }
+
+/* Animated sliding underline on desktop nav links */
+.nav a { position: relative; }
+.nav a::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -5px;
+  height: 2px; border-radius: 2px;
+  background: var(--grad-primary, linear-gradient(90deg, #0d9488, #14b8a6));
+  transform: scaleX(0); transform-origin: right center;
+  transition: transform 0.32s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.nav a:hover::after { transform: scaleX(1); transform-origin: left center; }
+
+/* Light sweep across primary CTAs on hover */
+.btn-primary, .ehero-btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn-primary::after, .ehero-btn::after {
+  content: "";
+  position: absolute; top: 0; left: -120%;
+  width: 70%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary:hover::after, .ehero-btn:hover::after { animation: btnSheen 0.85s ease; }
+  @keyframes btnSheen { to { left: 140%; } }
+}
+
+/* Pointer-reactive 3D tilt — JS adds .tilt-active while hovering */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+.tilt.tilt-active { transition: box-shadow 0.2s ease; }
+
 /* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01s !important; animation-iteration-count: 1 !important; transition-duration: 0.01s !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .tilt { transform: none !important; }
 }
